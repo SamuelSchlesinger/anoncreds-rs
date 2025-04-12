@@ -14,4 +14,9 @@ serde = { version = "1.0.219", features = ["derive"] }
 subtle = "2.6.1"
 
 [dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
 rand_core = { version = "0.6.4", features = ["getrandom"] }
+
+[[bench]]
+name = "issuance_bench"
+harness = false

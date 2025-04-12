@@ -48,7 +48,7 @@ impl Transcript {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct PrivateKey {
     x: Scalar,
     public: PublicKey,
@@ -68,12 +68,12 @@ impl PrivateKey {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct PublicKey {
     w: RistrettoPoint,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Params {
     h0: RistrettoPoint,
     h1: RistrettoPoint,
@@ -97,13 +97,13 @@ impl Params {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct PreIssuance {
     r: Scalar,
     k: Scalar,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct IssuanceRequest {
     kr: RistrettoPoint,
     c: Scalar,
@@ -111,7 +111,7 @@ pub struct IssuanceRequest {
     k_z: Scalar,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Credential {
     a: RistrettoPoint,
     e: Scalar,
@@ -178,7 +178,7 @@ impl PreIssuance {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct IssuanceResponse {
     a: RistrettoPoint,
     e: Scalar,
